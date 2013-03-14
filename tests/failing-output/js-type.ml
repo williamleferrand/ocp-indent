@@ -28,7 +28,7 @@ val instances
     -> (App.t * Config.instance * Config.app) list
     -> verbose:bool
     -> 'm
-    , 'm
+     , 'm
   ) Command.Spec.t
 
 (* jmcarthur *)
@@ -37,44 +37,44 @@ val instances
   -> (    Config.Network.t
     -> (App.t * Config.instance * Config.app) list
     -> verbose:bool -> 'm
-    , 'm
+     , 'm
   ) Command.Spec.t
 
 (* pszilagyi: Here's, I believe, a representative alternative that uses
    alignment to minimize vertical space. *)
 val instances : unit -> (    Config.Network.t
-    -> (App.t * Config.instance * Config.app) list
-    -> verbose:bool -> 'm
-    , 'm
-  ) Command.Spec.t
+                       -> (App.t * Config.instance * Config.app) list
+                       -> verbose:bool -> 'm
+                        , 'm
+                ) Command.Spec.t
 
 (* a presumably analogous version with the arrows at ends of lines *)
 val instances : unit -> ( Config.Network.t ->
-    (App.t * Config.instance * Config.app) list ->
-    verbose:bool ->
-    'm
-    , 'm
-  ) Command.Spec.t
+                          (App.t * Config.instance * Config.app) list ->
+                          verbose:bool ->
+                          'm
+                        , 'm
+                ) Command.Spec.t
 
 (* presumed analogs with stars *)
 val instances : unit * ( Config.Network.t *
-      (App.t * Config.instance * Config.app) list *
-      verbose:bool *
-        'm
-    , 'm
+    (App.t * Config.instance * Config.app) list *
+    verbose:bool *
+      'm
+                       , 'm
   ) Command.Spec.t
 val instances : unit * (   Config.Network.t
-    * (App.t * Config.instance * Config.app) list
-    * verbose:bool
-      * 'm
-    , 'm
+                       * (App.t * Config.instance * Config.app) list
+                       * verbose:bool
+                               * 'm
+                       , 'm
   ) Command.Spec.t
 
 
 
 (* analogous value expressions, analogous to lists, some different from now *)
 let _ = ( x
-  , y
+        , y
 )
 let _ = [ x
         ; y
@@ -87,7 +87,7 @@ let _ = [ x;
         ]
 let _ =
   ( x
-    , y
+  , y
   )
 let _ =
   ( x,
@@ -96,7 +96,7 @@ let _ =
 let _ =
   (
     x
-    , y
+  , y
   )
 let _ =
   [
@@ -113,7 +113,7 @@ let _ = [
 ]
 let _ = (
   x
-  , y
+, y
 )
 let _ = [
   x

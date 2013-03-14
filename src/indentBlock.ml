@@ -352,8 +352,8 @@ let op_prio_align_indent config =
   | BAR -> 10,T,-2
   | OF -> 20,L,2
   | LESSMINUS | COLONEQUAL -> 20,L,config.i_base
-  | COMMA -> 30,L,0
-  | MINUSGREATER -> 32,L,0 (* is an operator only in types *)
+  | COMMA -> 30,L,-2
+  | MINUSGREATER -> 32,T,-3 (* is an operator only in types *)
   | COLON | COLONGREATER -> 35,L,config.i_base
   | OR | BARBAR -> 40,T,0
   | AMPERSAND | AMPERAMPER -> 50,T,0
@@ -367,7 +367,8 @@ let op_prio_align_indent config =
   | INFIXOP1 _ -> 70,T,0
   | COLONCOLON -> 80,L,config.i_base
   | INFIXOP2 _ | PLUSDOT | PLUS | MINUSDOT | MINUS -> 90,L,config.i_base
-  | INFIXOP3 _ | STAR -> 100,L,config.i_base
+  | INFIXOP3 _ -> 100,L,config.i_base
+  | STAR -> 100,L,-2
   | INFIXOP4 _ -> 110,L,config.i_base
   (* apply: 140 *)
   | TILDE | QUESTION -> 140,L,config.i_base
